@@ -1,0 +1,14 @@
+{% extends "nav_object.py.j2" %}
+
+{% block nav_additional_attributes %}
+    # (Default: False) Whether or not the navbar is collapsible
+    COLLAPSIBLE = True
+    # REQUIRED: Locator for the collapsible menu element
+    MENU_LOCATOR = None
+    # REQUIRED: Locator for the button that expands the nav menu
+    EXPAND_BUTTON_LOCATOR = None
+    # (Optional) Locator for the button that collapses the nav menu.
+    # If not set, the value from EXPAND_BUTTON_LOCATOR will be used
+    COLLAPSE_BUTTON_LOCATOR = None
+{% endblock %}
+

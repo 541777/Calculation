@@ -1,0 +1,4 @@
+[console_scripts]
+lorem-copy = loremipsum:copy
+loremipsum = loremipsum:main
+

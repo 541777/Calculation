@@ -1,0 +1,12 @@
+def math(a,b):
+        c=a+b
+        e=a-b
+        d=""
+        try:
+            d=a/b
+        except:
+            print "you cant divide by 0" 
+        print 'addtion:',c
+        print 'sudstraction:',(e)
+        print 'division:',(d)
+

@@ -1,0 +1,83 @@
+import webdriver_test_tools
+from webdriver_test_tools import config
+import os.path
+import {{test_package}}
+
+
+class WebDriverConfig(config.WebDriverConfig):
+    """Configurations for webdriver"""
+
+    # File Path Configurations
+
+    # Used to set LOG_PATH and SCREENSHOT_PATH. Do not modify!
+    _PACKAGE_ROOT = os.path.dirname(os.path.abspath({{test_package}}.__file__))
+
+    # Path to the log directory. Defaults to the log subdirectory in the
+    # webdriver_test_tools package root directory if unspecified
+    LOG_PATH = os.path.join(_PACKAGE_ROOT, 'log')
+
+    # Path to the screenshot directory. Defaults to the screenshot subdirectory
+    # in the webdriver_test_tools package root directory if unspecified
+    SCREENSHOT_PATH = os.path.join(_PACKAGE_ROOT, 'screenshot')
+
+    # (Default: '{date}/{time}-{test}-{browser}.png') Format string used to
+    # determine filenames for screenshots (relative to SCREENSHOT_PATH). The
+    # format string can include the following parameters:
+    #
+    # {date}: Replaced with the date the screenshot was taken (YYYY-MM-DD)
+    # {time}: Replaced with the time the screenshot was taken (HHMMSS)
+    # {test}: Replaced with the test method running when screenshot was taken
+    # {browser}: Replaced with the browser used when screenshot was taken
+    #
+    # The format string can include '/' directory separators to save
+    # screenshots in subdirectories of SCREENSHOT_PATH.
+    SCREENSHOT_FILENAME_FORMAT = '{date}/{time}-{test}-{browser}.png'
+
+
+    # UNCOMMENT TO OVERRIDE DEFAULT CONFIGURATIONS
+
+    # WebDriverTestCase Configurations
+
+    # (Default: 10) Default number of seconds for WebDriverTestCase assertion
+    # methods to wait for expected conditions to occur before test fails
+    # https://connordelacruz.com/webdriver-test-tools/webdriver_test_tools.testcase.webdriver.html#assertion-methods
+    # DEFAULT_ASSERTION_TIMEOUT = 10
+
+
+    # Browser Driver Initialization Arguments
+    #
+    # NOTE: Logging configurations are set when the corresponding
+    # get_<browser>_driver() method is called. This allows for projects to
+    # override the LOG_PATH variable without having to also override all
+    # <browser>_KWARGS variables as well.
+
+    # Keyword args for webdriver.Firefox()
+    # FIREFOX_KWARGS = {}
+
+    # Keyword args for webdriver.Chrome()
+    # CHROME_KWARGS = {}
+
+    # Keyword args for webdriver.Safari()
+    # SAFARI_KWARGS = {}
+
+    # Keyword args for webdriver.Ie()
+    # IE_KWARGS = {}
+
+    # Keyword args for webdriver.Edge()
+    # EDGE_KWARGS = {}
+
+
+    # Mobile Configurations
+
+    # Dictionary with 'mobileEmulation' options for Chrome
+    # CHROME_MOBILE_EMULATION = { "deviceName": "Pixel 2" }
+
+
+    # Headless Browser Configurations
+
+    # Command line arguments to use in addition to the --headless flag
+    # CHROME_HEADLESS_ARGS = ['--window-size=1920x1080',]
+
+    # Command line arguments to use in addition to the -headless flag
+    # FIREFOX_HEADLESS_ARGS = []
+

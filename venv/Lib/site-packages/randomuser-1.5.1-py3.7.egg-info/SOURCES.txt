@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+randomuser.py
+setup.cfg
+setup.py
+randomuser.egg-info/PKG-INFO
+randomuser.egg-info/SOURCES.txt
+randomuser.egg-info/dependency_links.txt
+randomuser.egg-info/not-zip-safe
+randomuser.egg-info/top_level.txt
